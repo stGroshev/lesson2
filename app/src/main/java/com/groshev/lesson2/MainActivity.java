@@ -3,6 +3,7 @@ package com.groshev.lesson2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -102,7 +103,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void printResult(Button button) {
-        tvResult.setText(button.getText());
+        String d = (String) button.getText();
+        tvResult.setText(d);
+        Log.d("myTag","значение: "+ d);
     }
 
 }

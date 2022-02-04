@@ -19,7 +19,7 @@
 
 
     <Button
-        android:id="@+id/buttonCleanOf"
+        android:id="@+id/buttonCleanOff"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/cleanOff"
@@ -40,7 +40,7 @@
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@+id/button8"
         app:layout_constraintEnd_toStartOf="@+id/buttonDelete"
-        app:layout_constraintStart_toEndOf="@+id/buttonCleanOf"
+        app:layout_constraintStart_toEndOf="@+id/buttonCleanOff"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
 
@@ -178,7 +178,7 @@
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toStartOf="@+id/button8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/buttonCleanOf" />
+        app:layout_constraintTop_toBottomOf="@id/buttonCleanOff" />
 
     <Button
         android:id="@+id/button8"

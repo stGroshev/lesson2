@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="buttonTextSize">25sp</dimen>
+    <dimen name="buttonTextSize">15sp</dimen>
     <dimen name="SizeTextView">45sp</dimen>
+    <dimen name="marginButtonTop">350dp</dimen>
+    <dimen name="marginTextViewBottom">200dp</dimen>
+    <dimen name="biasChainVertical">0.9</dimen>
+    <dimen name="heightTextView">150dp</dimen>
 </resources>

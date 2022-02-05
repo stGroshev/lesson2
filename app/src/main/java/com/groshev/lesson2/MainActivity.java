@@ -166,6 +166,7 @@ public class MainActivity extends AppCompatActivity {
         Listener(buttonFive);
         Listener(buttonSix);
         Listener(buttonSeven);
+        Listener(buttonEight);
         Listener(buttonNine);
         Listener(buttonCleanOff);
         Listener(buttonDelete);

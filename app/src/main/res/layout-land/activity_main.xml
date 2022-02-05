@@ -7,17 +7,17 @@
     android:background="@drawable/paper_texture"
     tools:context=".MainActivity">
 
+
     <TextView
         android:id="@+id/tvResult"
         android:layout_width="0dp"
-        android:layout_height="@dimen/heightTextView"
+        android:layout_height="wrap_content"
         android:gravity="center|end"
         android:background="@color/white"
         android:textSize="@dimen/SizeTextView"
         app:layout_constraintBottom_toTopOf="@+id/buttonPercent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="@dimen/biasChainVertical"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -29,10 +29,11 @@
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@+id/button7"
         app:layout_constraintEnd_toStartOf="@+id/buttonPercent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="@dimen/biasChainVertical"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_bias="@dimen/biasChainVertical" />
 
     <Button
         android:id="@+id/buttonPercent"
@@ -67,7 +68,7 @@
         android:text="@string/division"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@id/buttonMultiplication"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
         app:layout_constraintStart_toEndOf="@id/buttonDelete"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="@dimen/biasChainVertical"
@@ -81,7 +82,8 @@
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@id/button00"
         app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/button4" />
 
     <Button
@@ -113,7 +115,7 @@
         android:text="@string/multiplication"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@id/buttonSubtraction"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
         app:layout_constraintStart_toEndOf="@id/button9"
         app:layout_constraintTop_toBottomOf="@id/buttonDivision" />
 
@@ -124,7 +126,7 @@
         android:text="@string/subtraction"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@id/buttonAddition"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
         app:layout_constraintStart_toEndOf="@id/button6"
         app:layout_constraintTop_toBottomOf="@id/buttonMultiplication" />
 
@@ -135,7 +137,7 @@
         android:text="@string/addition"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@id/buttonEquals"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
         app:layout_constraintStart_toEndOf="@id/button3"
         app:layout_constraintTop_toBottomOf="@id/buttonSubtraction" />
 
@@ -147,7 +149,8 @@
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@+id/button1"
         app:layout_constraintEnd_toStartOf="@+id/button5"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/button7" />
 
     <Button
@@ -180,7 +183,8 @@
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintEnd_toStartOf="@+id/button8"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@id/buttonCleanOff" />
 
     <Button
@@ -213,7 +217,8 @@
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        app:layout_constraintStart_toStartOf="@+id/guideline1"
         app:layout_constraintTop_toBottomOf="@+id/button1" />
 
     <Button
@@ -245,7 +250,23 @@
         android:text="@string/equals"
         android:textSize="@dimen/buttonTextSize"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
         app:layout_constraintStart_toEndOf="@id/buttonComma"
         app:layout_constraintTop_toBottomOf="@id/buttonAddition" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2"
+        app:layout_constraintStart_toStartOf="@+id/buttonCleanOff"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity{
-    String value = "0";
+    String value;
     Button buttonOne;
     Button buttonTwo;
     Button buttonThree;
@@ -198,7 +198,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
     private void printResult(Button button) {
-        value = (String) button.getText();
+        value = tvResult.getText().toString() + " " + button.getText().toString();
         tvResult.setText(value);
         Log.d("myTag", "значение: " + value);
     }

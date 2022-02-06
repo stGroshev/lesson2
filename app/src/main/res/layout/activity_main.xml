@@ -7,19 +7,35 @@
     android:background="@drawable/paper_texture"
     tools:context=".MainActivity">
 
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="button0,button00,button1,button2,button3" />
+
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
     <TextView
         android:id="@+id/tvResult"
         android:layout_width="0dp"
         android:layout_height="@dimen/heightTextView"
-        android:gravity="center|end"
         android:background="@color/white"
+        android:gravity="center|end"
         android:textSize="@dimen/SizeTextView"
         app:layout_constraintBottom_toTopOf="@+id/buttonPercent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintVertical_bias="@dimen/biasChainVertical"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
 
     <Button
         android:id="@+id/buttonCleanOff"

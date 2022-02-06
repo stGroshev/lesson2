@@ -1,5 +1,6 @@
 package com.groshev.lesson2;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -8,8 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity {
-
+public class MainActivity extends AppCompatActivity{
+    String value = "0";
     Button buttonOne;
     Button buttonTwo;
     Button buttonThree;
@@ -39,6 +40,43 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         initView();
         startListener();
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString("tvResult", value);
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        value = savedInstanceState.getString("tvResult");
+        tvResult.setText(value);
+    }
+
+    private void initView() {
+        buttonOne = findViewById(R.id.button1);
+        buttonTwo = findViewById(R.id.button2);
+        buttonThree = findViewById(R.id.button3);
+        buttonFour = findViewById(R.id.button4);
+        buttonFive = findViewById(R.id.button5);
+        buttonSix = findViewById(R.id.button6);
+        buttonSeven = findViewById(R.id.button7);
+        buttonEight = findViewById(R.id.button8);
+        buttonNine = findViewById(R.id.button9);
+        buttonComma = findViewById(R.id.buttonComma);
+        buttonDelete = findViewById(R.id.buttonDelete);
+        buttonCleanOff = findViewById(R.id.buttonCleanOff);
+        buttonPercent = findViewById(R.id.buttonPercent);
+        buttonMultiplication = findViewById(R.id.buttonMultiplication);
+        buttonDivision = findViewById(R.id.buttonDivision);
+        buttonAddition = findViewById(R.id.buttonAddition);
+        buttonEquals = findViewById(R.id.buttonEquals);
+        buttonSubtraction = findViewById(R.id.buttonSubtraction);
+        buttonZero = findViewById(R.id.button0);
+        buttonZeroZero = findViewById(R.id.button00);
+        tvResult = findViewById(R.id.tvResult);
     }
 
     private void Listener(Button button) {
@@ -134,29 +172,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void initView() {
-        buttonOne = findViewById(R.id.button1);
-        buttonTwo = findViewById(R.id.button2);
-        buttonThree = findViewById(R.id.button3);
-        buttonFour = findViewById(R.id.button4);
-        buttonFive = findViewById(R.id.button5);
-        buttonSix = findViewById(R.id.button6);
-        buttonSeven = findViewById(R.id.button7);
-        buttonEight = findViewById(R.id.button8);
-        buttonNine = findViewById(R.id.button9);
-        buttonComma = findViewById(R.id.buttonComma);
-        buttonDelete = findViewById(R.id.buttonDelete);
-        buttonCleanOff = findViewById(R.id.buttonCleanOff);
-        buttonPercent = findViewById(R.id.buttonPercent);
-        buttonMultiplication = findViewById(R.id.buttonMultiplication);
-        buttonDivision = findViewById(R.id.buttonDivision);
-        buttonAddition = findViewById(R.id.buttonAddition);
-        buttonEquals = findViewById(R.id.buttonEquals);
-        buttonSubtraction = findViewById(R.id.buttonSubtraction);
-        buttonZero = findViewById(R.id.button0);
-        buttonZeroZero = findViewById(R.id.button00);
-        tvResult = findViewById(R.id.tvResult);
-    }
 
     private void startListener() {
         Listener(buttonOne);
@@ -183,8 +198,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void printResult(Button button) {
-        String d = (String) button.getText();
-        tvResult.setText(d);
-        Log.d("myTag", "значение: " + d);
+        value = (String) button.getText();
+        tvResult.setText(value);
+        Log.d("myTag", "значение: " + value);
     }
 }

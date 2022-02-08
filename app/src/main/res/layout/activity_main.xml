@@ -57,7 +57,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonDivision"
         style="@style/myButtonStyleBlack"
-        android:layout_marginRight="@dimen/zero"
+        android:layout_marginEnd="@dimen/zero"
         android:text="@string/division"
         app:layout_constraintBottom_toTopOf="@id/buttonMultiplication"
         app:layout_constraintEnd_toEndOf="parent"
@@ -97,7 +97,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonMultiplication"
         style="@style/myButtonStyleBlack"
-        android:layout_marginRight="@dimen/zero"
+        android:layout_marginEnd="@dimen/zero"
         android:text="@string/multiplication"
         app:layout_constraintBottom_toTopOf="@id/buttonSubtraction"
         app:layout_constraintEnd_toEndOf="parent"
@@ -107,7 +107,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonSubtraction"
         style="@style/myButtonStyleBlack"
-        android:layout_marginRight="@dimen/zero"
+        android:layout_marginEnd="@dimen/zero"
         android:text="@string/subtraction"
         app:layout_constraintBottom_toTopOf="@id/buttonAddition"
         app:layout_constraintEnd_toEndOf="parent"
@@ -117,7 +117,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonAddition"
         style="@style/myButtonStyleBlack"
-        android:layout_marginRight="@dimen/zero"
+        android:layout_marginEnd="@dimen/zero"
         android:text="@string/addition"
         app:layout_constraintBottom_toTopOf="@id/buttonEquals"
         app:layout_constraintEnd_toEndOf="parent"
@@ -211,7 +211,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonEquals"
         style="@style/myButtonStyleGreen"
-        android:layout_marginRight="@dimen/zero"
+        android:layout_marginEnd="@dimen/zero"
         android:text="@string/equals"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -2,8 +2,9 @@
 <resources>
     <dimen name="buttonTextSize">15sp</dimen>
     <dimen name="SizeTextView">45sp</dimen>
-    <dimen name="marginButtonTop">350dp</dimen>
     <dimen name="marginTextViewBottom">200dp</dimen>
     <dimen name="biasChainVertical">0.9</dimen>
     <dimen name="heightTextView">150dp</dimen>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="marginButton">10dp</dimen>
 </resources>

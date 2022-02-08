@@ -234,28 +234,28 @@ public class MainActivity extends AppCompatActivity {
         Log.d("myTag", "значение: " + value);
     }
 
-    void result(){
-        switch (operation){
-            case 1:{
-                result =  String.format("%s",valueOne + valueTwo);
+    void result() {
+        switch (operation) {
+            case 1: {
+                result = String.format("%s", valueOne + valueTwo);
                 input = result;
                 tvResult.setText(tvResult.getText().toString() + result);
                 break;
             }
-            case 2:{
-                result =  String.format("%s",valueOne - valueTwo);
+            case 2: {
+                result = String.format("%s", valueOne - valueTwo);
                 input = result;
                 tvResult.setText(tvResult.getText().toString() + result);
                 break;
             }
-            case 3:{
-                result =  String.format("%s",valueOne * valueTwo);
+            case 3: {
+                result = String.format("%s", valueOne * valueTwo);
                 input = result;
                 tvResult.setText(tvResult.getText().toString() + result);
                 break;
             }
-            case 4:{
-                result =  String.format("%s",valueOne / valueTwo);
+            case 4: {
+                result = String.format("%s", valueOne / valueTwo);
                 input = result;
                 tvResult.setText(tvResult.getText().toString() + result);
                 break;

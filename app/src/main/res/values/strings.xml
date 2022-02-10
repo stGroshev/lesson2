@@ -20,4 +20,10 @@
     <string name="cleanOff">C</string>
     <string name="percent">%</string>
     <string name="delete">⌫</string>
+    <string name="settings">⋮</string>
+    <string name="material_dark">Темная тема</string>
+    <string name="material_light">Светлая тема</string>
+    <string name="material_green">Зеленая тема</string>
+    <string name="material_orange">Оранжевая тема</string>
+    <string name="text_button_back"><![CDATA[<]]></string>
 </resources>

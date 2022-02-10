@@ -3,6 +3,7 @@ package com.groshev.lesson2;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -32,13 +33,13 @@ public class MainActivity extends AppCompatActivity {
     Button buttonEquals;
     Button buttonZero;
     Button buttonZeroZero;
+    Button buttonSettings;
     TextView tvResult;
-    Float valueOne;
-    Float valueTwo;
+    Double valueOne;
+    Double valueTwo;
     int operation;
     String input = "";
     String result = "";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         buttonZero = findViewById(R.id.button0);
         buttonZeroZero = findViewById(R.id.button00);
         tvResult = findViewById(R.id.tvResult);
+        buttonSettings = findViewById(R.id.buttonSettings);
     }
 
     private void Listener(Button button) {
@@ -138,7 +140,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                     case (R.id.buttonMultiplication): {
                         printResult(buttonMultiplication);
-                        valueOne = Float.parseFloat(input);
+                        valueOne = Double.parseDouble(input);
                         operation = 3;
                         input = "";
                         break;
@@ -153,37 +155,37 @@ public class MainActivity extends AppCompatActivity {
                     }
                     case (R.id.buttonDivision): {
                         printResult(buttonDivision);
-                        valueOne = Float.parseFloat(input);
+                        valueOne = Double.parseDouble(input);
                         operation = 4;
                         input = "";
                         break;
                     }
                     case (R.id.buttonAddition): {
                         printResult(buttonAddition);
-                        valueOne = Float.parseFloat(input);
+                        valueOne = Double.parseDouble(input);
                         operation = 1;
                         input = "";
                         break;
                     }
                     case (R.id.buttonPercent): {
                         printResult(buttonPercent);
+                        operation = 5;
                         break;
                     }
                     case (R.id.buttonEquals): {
                         printResult(buttonEquals);
-                        valueTwo = Float.parseFloat(input);
+                        valueTwo = Double.parseDouble(input);
                         result();
                         break;
                     }
                     case (R.id.buttonCleanOff): {
-                        printResult(buttonCleanOff);
                         tvResult.setText("");
                         input = "";
                         break;
                     }
                     case (R.id.buttonSubtraction): {
                         printResult(buttonSubtraction);
-                        valueOne = Float.parseFloat(input);
+                        valueOne = Double.parseDouble(input);
                         operation = 2;
                         input = "";
                         break;
@@ -194,6 +196,11 @@ public class MainActivity extends AppCompatActivity {
                     }
                     case (R.id.button00): {
                         printResult(buttonZeroZero);
+                        break;
+                    }
+                    case (R.id.buttonSettings): {
+                        Intent intent = new Intent(MainActivity.this,SecondActivity.class);
+                        startActivity(intent);
                         break;
                     }
                     default: {
@@ -226,12 +233,12 @@ public class MainActivity extends AppCompatActivity {
         Listener(buttonSubtraction);
         Listener(buttonZero);
         Listener(buttonZeroZero);
+        Listener(buttonSettings);
     }
 
     private void printResult(Button button) {
         value = tvResult.getText().toString() + button.getText().toString();
         tvResult.setText(value);
-        Log.d("myTag", "значение: " + value);
     }
 
     void result() {
@@ -256,6 +263,13 @@ public class MainActivity extends AppCompatActivity {
             }
             case 4: {
                 result = String.format("%s", valueOne / valueTwo);
+                input = result;
+                tvResult.setText(tvResult.getText().toString() + result);
+                break;
+            }
+            case 5: {
+                Double f = 100.0;
+                result = String.format("%s", (valueOne/f) * valueTwo);
                 input = result;
                 tvResult.setText(tvResult.getText().toString() + result);
                 break;

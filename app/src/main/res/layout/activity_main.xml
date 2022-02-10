@@ -6,6 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonSettings"
+        android:layout_width="@dimen/widthButtonSettings"
+        android:layout_height="wrap_content"
+        android:text="@string/settings"
+        android:textSize="@dimen/textSize_button_settings"
+        android:insetTop="@dimen/zero"
+        android:insetBottom="@dimen/zero"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1"
+        app:layout_constraintVertical_bias="0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tvResult"
         android:layout_width="@dimen/zero"
